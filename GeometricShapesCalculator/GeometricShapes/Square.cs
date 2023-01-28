@@ -6,6 +6,10 @@ public class Square : IGeometricShape
 
     public Square(double side)
     {
+        if (side <= 0)
+        {
+            throw new ArgumentException("Стоорона должна быть больше нуля");
+        }
         this._side = side;
     }
 

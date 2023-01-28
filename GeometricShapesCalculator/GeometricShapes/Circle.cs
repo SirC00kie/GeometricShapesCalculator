@@ -6,6 +6,10 @@ public class Circle : IGeometricShape
 
     public Circle(double radius)
     {
+        if (radius <= 0)
+        {
+            throw new ArgumentException("Радиус должен быть больше нуля");
+        }
         this._radius = radius;
     }
 
